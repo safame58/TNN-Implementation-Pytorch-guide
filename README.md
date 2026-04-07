@@ -9,7 +9,7 @@ This repository provides a minimal PyTorch implementation of tensorized neural n
 
 We Compare between two architectures CNN and TNN:
 
-### Dense CNN
+#### 1. Dense CNN
 We use a simple convolutional neural network composed of:
 - One convolutional layer (1 → 32 channels, 3×3 kernel)
 - ReLU activation
@@ -19,7 +19,7 @@ We use a simple convolutional neural network composed of:
 This serves as the baseline model.
 
 
-### Tensorized Neural Network (TNN)
+#### 2. Tensorized Neural Network (TNN)
 
 The tensorized model follows the same architecture but replaces layers with tensorized versions:
 
@@ -34,7 +34,7 @@ The tensorized model follows the same architecture but replaces layers with tens
   - The weight matrix is represented as a sequence of tensor cores
   - This provides a structured and parameter-efficient representation
 
-We obtained the following results:
+**We obtained the following results:**
 
 - The tensorized model maintains high accuracy with only a small performance drop
 - It achieves over **93% parameter reduction**
@@ -48,10 +48,9 @@ Open the notebook: jupyter notebook tnn_mnist.ipynb
 
 ## Notes
 
-- MPO is implemented explicitly via tensor contraction
 - This is a minimal educational example (not optimized)
 - There exists many optimized TNNs that are able to maintain the dense model accuracy 
-  and significantly reduce the parameters for more complex tasks, eg. check [this review]([tnn_mnist.ipynb](https://arxiv.org/pdf/2302.09019))
+  and significantly reduce the parameters for more complex tasks, eg. check [this review](https://arxiv.org/pdf/2302.09019)
 
 ## Purpose
 
